@@ -27,7 +27,7 @@ export default function App() {
         style={styles.input}
         value={note}
         onChangeText={setNote}
-        placeholder="Hi"
+        placeholder="Type Note Here.."
       />
       <Button title="Submit Note" onPress={submitNote} />
       {notes.map((note, index) => (
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 20,
     padding: 10,
+    backgroundColor: "white",
   },
   noteCard: {
     width: "100%",
