@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { StyleSheet, View, TextInput, Button, Text, Image } from "react-native";
+import {
+  StyleSheet,
+  View,
+  TextInput,
+  Button,
+  Text,
+  Image,
+  ImageBackground,
+} from "react-native";
 import NoteCard from "./components/noteCard";
 
 export default function App() {
@@ -18,7 +26,10 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      source={require("./assets/backgound.png")}
+      style={styles.container}
+    >
       <View style={styles.header}>
         <Text style={styles.headerText}>Notetaking App</Text>
         <Image style={styles.logo} source={require("./assets/favicon.png")} />
@@ -33,7 +44,7 @@ export default function App() {
       {notes.map((note, index) => (
         <NoteCard key={index} note={note} onDelete={() => deleteNote(index)} />
       ))}
-    </View>
+    </ImageBackground>
   );
 }
 
@@ -43,7 +54,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    backgroundColor: "#90EE90",
   },
   header: {
     flexDirection: "row",
