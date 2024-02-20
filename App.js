@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <ImageBackground
-      source={require("./assets/backgound.png")}
+      source={require("./assets/background.png")}
       style={styles.container}
     >
       <View style={styles.header}>
